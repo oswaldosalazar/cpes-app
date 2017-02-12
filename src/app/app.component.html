@@ -3,7 +3,7 @@
 
     <span>Electric Supplies</span>
 
-    <button md-button>{{product1}}</button>
+    <button md-button [routerLink]="['/product1']">{{product1}}</button>
     <button md-button>{{product2}}</button>
     <button md-button>{{product3}}</button>
     <span></span><span></span><span></span>
@@ -11,22 +11,14 @@
     <button md-icon-button [md-menu-trigger-for]="menu">
       <md-icon>more_vert</md-icon>
     </button>
+
   </md-toolbar>
+
   <md-menu x-position="before" #menu="mdMenu">
     <button md-menu-item>Option 1</button>
     <button md-menu-item>Option 2</button>
   </md-menu>
-
-  <md-card>
-    <button md-button>All</button>
-    <button md-raised-button>Of</button>
-    <button md-raised-button color="primary">The</button>
-    <button md-raised-button color="accent">Buttons</button>
-  </md-card>
-
-  <span class="done">
-    <button md-fab>
-      <md-icon>check circle</md-icon>
-    </button>
-  </span>
+</div>
+<div>
+  <router-outlet></router-outlet>
 </div>

@@ -3,18 +3,26 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { Product1Component } from './components/product1/product1.component';
+
+const appRoutes: Routes = [
+  { path: 'product1', component: Product1Component }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Product1Component
   ],
   imports: [
     MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
