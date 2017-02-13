@@ -7,15 +7,21 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { Product1Component } from './components/product1/product1.component';
+import { LoginComponent } from './components/login/login.component';
+import { CreateComponent } from './components/create/create.component';
 
 const appRoutes: Routes = [
-  { path: 'product1', component: Product1Component }
+  { path: 'product1', component: Product1Component },
+  { path: 'login', component: LoginComponent },
+  { path: 'create', component: CreateComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    Product1Component
+    Product1Component,
+    LoginComponent,
+    CreateComponent
   ],
   imports: [
     MaterialModule.forRoot(),

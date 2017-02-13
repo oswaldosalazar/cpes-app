@@ -8,15 +8,15 @@
     <button md-button>{{product3}}</button>
     <span></span><span></span><span></span>
 
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
+    <button md-button [md-menu-trigger-for]="menu">
+      <span>Sign In </span><md-icon>people</md-icon>
     </button>
 
   </md-toolbar>
 
   <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>Option 1</button>
-    <button md-menu-item>Option 2</button>
+    <button md-menu-item [routerLink]="['/login']">Login</button>
+    <button md-menu-item [routerLink]="['/create']">Create Account</button>
   </md-menu>
 </div>
 <div>
